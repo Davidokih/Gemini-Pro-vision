@@ -1,0 +1,4 @@
+
+1
+Make this code run successfully with a result
+function multiply(a, b) => {a * b}
