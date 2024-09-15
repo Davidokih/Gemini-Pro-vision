@@ -38,11 +38,12 @@ exports.uploadBankStatement = async (req, res) => {
     const bankStatement = new BankStatement({
       image: result.url,
       statementData,
+      aiResponse:response
     });
 
     await bankStatement.save();
 
-    res.status(201).json({ message: "Bank statement uploaded successfully", data: response });
+    res.status(201).json({ message: "Bank statement uploaded successfully", data: bankStatement });
   } catch (error) {
     console.error("Error uploading bank statement:", error);
     res.status(500).json({ error: "Internal server error" });
