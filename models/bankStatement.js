@@ -9,6 +9,9 @@ const bankStatementSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  aiResponse: {
+    type: String
+  },
   uploadedAt: {
     type: Date,
     default: Date.now,
